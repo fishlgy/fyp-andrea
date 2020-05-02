@@ -1,0 +1,183 @@
+.parent {
+  background-color: black;
+  min-height: 100%;
+  position: relative;
+  top: 0px;
+}
+
+.child {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.flex-align-center {
+  display: flex;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#main {
+  background-color: black;
+}
+
+.light {
+  background-color: white;
+}
+
+.door {
+  max-width: 25%;
+  min-width: 150px;
+  opacity: 0;
+}
+
+.left-door {
+  align-content: center;
+  padding: 8px;
+  background-color: pink;
+}
+
+.right-door {
+  align-content: center;
+  padding: 8px;
+  background-color: blue;
+}
+
+.key {
+  position: absolute;
+  height: 100px;
+  opacity: 0;
+}
+
+.key:hover {
+  transition: 0.2s ease;
+  opacity: 1;
+}
+
+.index-title {
+  display: block;
+  width: auto;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-size: 23px;
+  color: white;
+  opacity: 0;
+  margin-top: -50px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.doorFadeIn {
+  -webkit-animation: doorFadeIn 3s 2s forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: doorFadeIn 3s 2s forwards;
+  /* Firefox < 16 */
+  -ms-animation: doorFadeIn 3s 2s forwards;
+  /* Internet Explorer */
+  -o-animation: doorFadeIn 3s 2s forwards;
+  /* Opera < 12.1 */
+  animation: doorFadeIn 3s 2s forwards;
+}
+
+.titleFadeIn {
+  -webkit-animation: titleFadeIn 1s 5s forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: titleFadeIn 1s 5s forwards;
+  /* Firefox < 16 */
+  -ms-animation: titleFadeIn 1s 5s forwards;
+  /* Internet Explorer */
+  -o-animation: titleFadeIn 1s 5s forwards;
+  /* Opera < 12.1 */
+  animation: titleFadeIn 1s 5s forwards;
+}
+
+.titleFadeInFast {
+  visibility: visible;
+  -webkit-animation: titleFadeInFast 1s 0s forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: titleFadeInFast 1s 0s forwards;
+  /* Firefox < 16 */
+  -ms-animation: titleFadeInFast 1s 0s forwards;
+  /* Internet Explorer */
+  -o-animation: titleFadeInFast 1s 0s forwards;
+  /* Opera < 12.1 */
+  animation: titleFadeInFast 1s 0s forwards;
+}
+
+.titleFadeOut {
+  -webkit-animation: titleFadeOut 1s 0s forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: titleFadeOut 1s 0s forwards;
+  /* Firefox < 16 */
+  -ms-animation: titleFadeOut 1s 0s forwards;
+  /* Internet Explorer */
+  -o-animation: titleFadeOut 1s 0s forwards;
+  /* Opera < 12.1 */
+  animation: titleFadeOut 1s 0s forwards;
+}
+
+@keyframes doorFadeIn {
+  0% {
+    opacity: 0;
+    margin-bottom: 0px;
+  }
+  90% {
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+}
+@keyframes titleFadeInFast {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes titleFadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
