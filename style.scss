@@ -1,8 +1,11 @@
+$black-color: #222222; 
+
 .parent {
-    background-color: black;
+    background-color: $black-color;
     min-height: 100%; 
     position: relative;
     top: 0px;  
+    overflow: hidden;
 }
 
 .child {
@@ -22,12 +25,9 @@
 } 
 
 #main {
-    background-color: black;
+    background-color: $black-color;
 }
 
-#clickLayer { 
-}
- 
 .light {
     background-color: white;
 } 
@@ -50,13 +50,20 @@
     background-color: blue;
 }
  
-.key {
+.key { 
     position: absolute; 
-    height: 100px; 
+    margin-top:0px;
+    margin-left:0px;
+    height: 100px;
+    width: 100px;
+    left: 400px; 
     opacity: 0;
 } 
+.key:hover {
+    opacity: 0;
+}
 
-.key:hover{
+.effect-hover:hover{
     transition: .2s ease;
     opacity: 1;
 }
@@ -75,6 +82,12 @@
   
 .hide {
     opacity: 0;
+}
+
+.zoom {
+    transition-delay: 1s;
+    transition: transform 2s; 
+    transform: scale(5.5);
 }
 
 .doorFadeIn { 
@@ -112,6 +125,13 @@
             animation: titleFadeOut 1s 0s forwards;
 }
 
+.openDoor { 
+    -webkit-animation: openDoorFrames 1s 0s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: openDoorFrames 1s 0s forwards; /* Firefox < 16 */
+        -ms-animation: openDoorFrames 1s 0s forwards; /* Internet Explorer */
+         -o-animation: openDoorFrames 1s 0s forwards; /* Opera < 12.1 */
+            animation: openDoorFrames 1s 0s forwards;
+}
 
 @keyframes doorFadeIn {
     0%   { opacity: 0; margin-bottom: 0px; }
@@ -137,3 +157,10 @@
     100% { opacity: 0; visibility: hidden;}
 } 
  
+@keyframes openDoorFrames{
+    0%  { src: url('/img/door1.png'); }
+    25% { src: url('/img/door2.png'); }
+    50% { src: url('/img/door3.png'); }
+    75% { src: url('/img/door4.png'); }
+    100%{ src: url('/img/door4.png'); }
+}

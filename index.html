@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
         <script src="door.js"></script>
+        <script src="index.js"></script>
     </head>
 
     <body>
@@ -16,17 +17,18 @@
                     <div class="flex-align-center">
                         <img id="ivDoor" src="img/door.png" class="door doorFadeIn"/>
                     </div>
-                    <text id="tvLineOne" class="index-title titleFadeIn">Enter the void.</text>
-                    <text id="tvLineTwo" class="index-title hide">Please find the key.</text>
-                    <text id="tvLineThree" class="index-title hide">Open saseme.</text>
+                    <text id="tvLineOne" class="index-title titleFadeIn">Enter the void</text>
+                    <text id="tvLineTwo" class="index-title hide">The door is locked</text>
+                    <text id="tvLineThree" class="index-title hide">Try searching for the key</text>
+                    <text id="tvLineFour" class="index-title hide">You've unlocked the door</text>
                 </div>
             </div> 
 
             <div id="clickLayer" class="child flex-align-center"> 
-                <img src="img/key.png" class="key" style="top:100px; left: 400px;" >
-
+                <img src="img/key-black.png" class="key">
                 <img id="ivDoorClick" src="img/door.png" class="door"/>
             </div>
+
         </div>  
     </body>
 </html>
